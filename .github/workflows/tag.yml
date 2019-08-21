@@ -3,7 +3,6 @@ name: Tags
 on: 
   push:
     branches:
-    - refs/tags/*
     - !refs/heads
 
 jobs:
