@@ -1,15 +1,15 @@
 name: Tags
 
-on:
-  create: 
-    tags:
-    - 0.0.*
+on: [push]
 
 jobs:
 
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/bin/filter
+    - with:
+        args: "tag"
     - uses: actions/checkout@v1
     - name: Echo GITHUB_REF
       run: echo $GITHUB_REF
