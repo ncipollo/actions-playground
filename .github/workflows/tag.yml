@@ -2,7 +2,8 @@ name: Tags
 
 on:
   create: 
-    tags: 
+    tags:
+    - 0.0.*
 
 jobs:
 
