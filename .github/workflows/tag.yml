@@ -1,9 +1,6 @@
 name: Tags
 
-on: 
-  push:
-    branches:
-    - !refs/heads
+on: [push]
 
 jobs:
 
