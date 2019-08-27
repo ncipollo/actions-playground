@@ -16,4 +16,3 @@ jobs:
     - uses: ncipollo/release-action@release/test
       with: 
         token: ${{ secrets.GITHUB_TOKEN }}
-        name: "my release"
