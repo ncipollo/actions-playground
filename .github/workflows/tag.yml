@@ -1,9 +1,6 @@
 name: Releases
 
-on: 
-  push:
-    tags:
-    - '*'
+on: [push]
 
 jobs:
 
@@ -18,6 +15,8 @@ jobs:
         artifact: "flawless.png"
         artifactContentType: "image/png"
         bodyFile: "body.md"
+        commit: 'master'
         draft: "true"
         name: "the best release ever"
         token: ${{ secrets.GITHUB_TOKEN }}
+        tag: '3.14.15'
