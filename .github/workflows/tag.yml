@@ -16,5 +16,8 @@ jobs:
     - uses: ncipollo/release-action@release/test
       with:
         artifact: "flawless.png"
+        artifactContentType: "image/png"
         bodyFile: "body.md"
+        draft: "true"
+        name: "the best release ever"
         token: ${{ secrets.GITHUB_TOKEN }}
