@@ -15,5 +15,5 @@ jobs:
       run: echo $GITHUB_REF
     - uses: ncipollo/release-action@release/test
       with:
-        body: "- Maybe this will work?" 
+        bodyFile: "body.md"
         token: ${{ secrets.GITHUB_TOKEN }}
