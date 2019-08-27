@@ -15,5 +15,6 @@ jobs:
       run: echo $GITHUB_REF
     - uses: ncipollo/release-action@release/test
       with:
+        artifact: "flawless.png"
         bodyFile: "body.md"
         token: ${{ secrets.GITHUB_TOKEN }}
