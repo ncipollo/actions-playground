@@ -1,0 +1,12 @@
+name: Tags
+
+on: [push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Echo GITHUB_REF
+      run: echo $GITHUB_REF
