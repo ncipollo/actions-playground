@@ -1,4 +1,4 @@
-name: Tags
+name: Sanity Test
 
 on: [push]
 
