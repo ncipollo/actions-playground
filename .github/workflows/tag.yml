@@ -15,7 +15,7 @@ jobs:
       run: echo $GITHUB_REF
     - uses: ncipollo/release-action@release/v1.1.0
       with:
-        artifact: "flawless.png"
-        artifactContentType: "image/png"
+        artifact: "images/*.png,text/*.txt"
+        artifactContentType: "raw"
         bodyFile: "body.md"
         token: ${{ secrets.GITHUB_TOKEN }}
