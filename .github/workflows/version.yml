@@ -14,8 +14,6 @@ jobs:
     - name: Process version of tag
       id: version
       uses: ncipollo/semantic-version-action@release/v1
-      with:
-        tag: "0.0.21"
     - name: Dump steps context
       env:
         STEPS_CONTEXT: ${{ toJson(steps.version.outputs) }}
