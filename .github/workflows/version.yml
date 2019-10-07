@@ -11,11 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: version
+    - name: Process version of tag
+      id: version
       uses: ncipollo/semantic-version-action@release/v1
       with:
         tag: "0.21.0"
     - name: Dump steps context
       env:
-        STEPS_CONTEXT: ${{ toJson(steps.release.outputs) }}
+        STEPS_CONTEXT: ${{ toJson(steps.version.outputs) }}
       run: echo "$STEPS_CONTEXT"
