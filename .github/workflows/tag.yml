@@ -15,7 +15,7 @@ jobs:
       run: echo $GITHUB_REF
     - uses: ncipollo/release-action@v1
       with:
-        allowUpdates: true
+        allowUpdates: "true"
         artifact: "images/*.png,text/*.txt"
         artifactContentType: "raw"
         bodyFile: "body.md"
