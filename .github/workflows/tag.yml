@@ -19,5 +19,5 @@ jobs:
         artifact: "images/*.png,text/*.txt"
         artifactContentType: "raw"
         bodyFile: "body.md"
-        draft: false
+        draft: true
         token: ${{ secrets.GITHUB_TOKEN }}
