@@ -15,9 +15,9 @@ jobs:
       run: echo $GITHUB_REF
     - uses: ncipollo/release-action@release/1.4.0
       with:
-        allowUpdates: true
+        allowUpdates: false
         artifact: "images/*.png,text/*.txt"
         artifactContentType: "raw"
         bodyFile: "body.md"
-        prerelease: false
+        prerelease: true
         token: ${{ secrets.GITHUB_TOKEN }}
