@@ -18,7 +18,7 @@ jobs:
         allowUpdates: true
         artifact: "images/*.png,text/*.txt"
         artifactContentType: "raw"
-        bodyFile: "body.md"
+        body: "body.md"
         draft: true
         prerelease: true
         token: ${{ secrets.GITHUB_TOKEN }}
