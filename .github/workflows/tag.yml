@@ -21,4 +21,5 @@ jobs:
         bodyFile: "body.md"
         draft: true
         prerelease: true
+        replacesArtifacts: false
         token: ${{ secrets.GITHUB_TOKEN }}
