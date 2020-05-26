@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Echo GITHUB_REF
       run: echo $GITHUB_REF
-    - uses: ncipollo/release-action@release/1.7.1
+    - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
         artifacts: "images/*.png,text/*.txt"
@@ -21,4 +21,6 @@ jobs:
         bodyFile: "body.md"
         draft: true
         prerelease: true
+        omitBodyDuringUpdate: true
+        omitNameDuringUpdate: true
         token: ${{ secrets.GITHUB_TOKEN }}
