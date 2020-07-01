@@ -1,29 +1,29 @@
 name: Releases
 
-on: 
+on:
   push:
     tags:
-    - '*'
+      - '*'
 
 jobs:
 
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Echo GITHUB_REF
-      run: echo $GITHUB_REF
-    - name: Create Draft release
-      uses: ncipollo/release-action@v1
-      with:
-        allowUpdates: true
-        artifacts: "images/*.png,text/*.txt"
-        artifactContentType: "raw"
-        bodyFile: "body.md"
-        draft: true
-        replacesArtifacts: true
-        token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Publish release
+      - uses: actions/checkout@v1
+      - name: Echo GITHUB_REF
+        run: echo $GITHUB_REF
+      - name: Create Draft release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          artifacts: "images/*.png,text/*.txt"
+          artifactContentType: "raw"
+          bodyFile: "body.md"
+          draft: true
+          replacesArtifacts: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish release
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
