@@ -21,6 +21,8 @@ jobs:
           artifactContentType: "raw"
           bodyFile: "body.md"
           draft: false
+          omitBodyDuringUpdate: true
+          omitNameDuringUpdate: trues
           prerelease: false
-          replacesArtifacts: false
+          replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
