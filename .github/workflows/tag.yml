@@ -20,9 +20,7 @@ jobs:
           artifacts: "images/*.png,text/*.txt"
           artifactContentType: "raw"
           bodyFile: "body.md"
-          draft: false
-          omitBodyDuringUpdate: true
-          omitNameDuringUpdate: true
+          draft: trues
           prerelease: false
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
