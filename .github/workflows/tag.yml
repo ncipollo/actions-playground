@@ -14,7 +14,7 @@ jobs:
       - name: Echo GITHUB_REF
         run: echo $GITHUB_REF
       - name: Create Draft release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@test
         with:
           allowUpdates: true
           artifacts: "images/*.png,text/*.txt"
@@ -24,7 +24,7 @@ jobs:
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@test
         with:
           allowUpdates: true
           omitBodyDuringUpdate: true
