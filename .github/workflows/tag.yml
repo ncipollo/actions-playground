@@ -13,20 +13,14 @@ jobs:
       - uses: actions/checkout@v1
       - name: Echo GITHUB_REF
         run: echo $GITHUB_REF
-      - name: Create Draft release
+      - name: Publish release
         uses: ncipollo/release-action@test
         with:
           allowUpdates: true
           artifacts: "images/*.png,text/*.txt"
           artifactContentType: "raw"
           bodyFile: "body.md"
-          draft: true
+          draft: false
+          prerelease: true
           replacesArtifacts: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Publish release
-        uses: ncipollo/release-action@test
-        with:
-          allowUpdates: true
-          omitBodyDuringUpdate: true
-          replacesArtifacts: false
           token: ${{ secrets.GITHUB_TOKEN }}
