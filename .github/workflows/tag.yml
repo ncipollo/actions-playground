@@ -14,7 +14,7 @@ jobs:
       - name: Echo GITHUB_REF
         run: echo $GITHUB_REF
       - name: Publish release
-        uses: ncipollo/release-action@v1.7.2
+        uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           artifacts: "images/*.png,text/*.txt"
