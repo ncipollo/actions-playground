@@ -10,10 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1.0.1
+    - uses: actions/checkout@v1
     - name: Process version of tag
       id: version
-      uses: ncipollo/semantic-version-action@v1
+      uses: ncipollo/semantic-version-action@v1.0.1
     - name: Dump steps context
       env:
         STEPS_CONTEXT: ${{ toJson(steps.version.outputs) }}
