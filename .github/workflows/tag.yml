@@ -21,8 +21,6 @@ jobs:
           artifactContentType: "raw"
           bodyFile: "body.md"
           draft: false
-          owner: ncipollo
           prerelease: false
           replacesArtifacts: true
-          repo: android-viper
-          token: ${{ secrets.OTHER_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
