@@ -16,10 +16,10 @@ jobs:
       - name: Print Environment Details
         run: ls /home/runner
       - name: Publish release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1.8.1
         with:
           allowUpdates: true
-          artifacts: "blarg.txt"
+          artifacts: "blarg.txt,~/artifact-test.txt"
           body: This release was generated to test artifact uploading.
           name: Artifact Test Release
           replacesArtifacts: true
