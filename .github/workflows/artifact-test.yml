@@ -1,0 +1,26 @@
+name: Artifact Test
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Print Environment Details
+        run: pwd;ls;
+      - name: Create file
+        run: "date >> test.txt"
+      - name: Publish release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          artifacts: test.txt
+          body: This release was generated to test artifact uploading.
+          name: Artifact Test Release
+          replacesArtifacts: true
+          token: ${{ secrets.GITHUB_TOKEN }}
