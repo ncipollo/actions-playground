@@ -16,11 +16,11 @@ jobs:
       - name: Publish release
         uses: ncipollo/release-action@v1
         with:
-          allowUpdates: false
+          allowUpdates: true
           artifacts: images/*.png,text/*.txt
           artifactContentType: "raw"
           bodyFile: "body.md"
-          draft: false
+          draft: true
           prerelease: false
-          replacesArtifacts: false
+          replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
