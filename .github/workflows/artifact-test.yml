@@ -14,12 +14,12 @@ jobs:
       - name: Create file
         run: "date >> ~/artifact-test.txt"
       - name: Print Environment Details
-        run: cd ~/;pwd
+        run: ls /home/runner
       - name: Publish release
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          artifacts: "/home/runner/artifact-test.txt"
+          artifacts: "/home/runner/artifact-testxx.txt"
           body: This release was generated to test artifact uploading.
           name: Artifact Test Release
           replacesArtifacts: true
