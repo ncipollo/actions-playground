@@ -14,7 +14,7 @@ jobs:
       - name: Create file
         run: "date >> ~/artifact-test.txt"
       - name: Print Environment Details
-        run: pwd;ls ~/;
+        run: cd ~/;pwd
       - name: Publish release
         uses: ncipollo/release-action@v1
         with:
