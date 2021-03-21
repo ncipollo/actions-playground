@@ -14,13 +14,14 @@ jobs:
       - name: Echo GITHUB_REF
         run: echo $GITHUB_REF
       - name: Publish release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@1.8.2
         with:
           allowUpdates: true
+          artifactErrorsFailBuild: true
           artifacts: images/*.png,text/*.txt
           artifactContentType: "raw"
           bodyFile: "body.md"
           draft: true
           prerelease: false
-          replacesArtifacts: true
+          replacesArtifacts: false
           token: ${{ secrets.GITHUB_TOKEN }}
