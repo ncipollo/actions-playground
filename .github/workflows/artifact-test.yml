@@ -19,7 +19,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          artifactErrorsFailBuild: true
+          artifactErrorsFailBuild: false
           artifacts: "blarg.txt,~/artifact-test.txt"
           body: This release was generated to test artifact uploading.
           name: Artifact Test Release
