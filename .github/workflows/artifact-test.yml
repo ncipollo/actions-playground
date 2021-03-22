@@ -16,7 +16,7 @@ jobs:
       - name: Print Environment Details
         run: ls /home/runner
       - name: Publish release
-        uses: ncipollo/release-action@release/1.8.2
+        uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           artifactErrorsFailBuild: true
