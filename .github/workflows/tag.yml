@@ -21,7 +21,8 @@ jobs:
           artifacts: images/*.png,text/*.txt
           artifactContentType: "raw"
           bodyFile: "body.md"
-          draft: true
+          discussionCategory: "Release"
+          draft: false
           prerelease: false
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
