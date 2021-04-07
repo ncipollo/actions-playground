@@ -14,7 +14,7 @@ jobs:
       - name: Echo GITHUB_REF
         run: echo $GITHUB_REF
       - name: Publish release
-        uses: ncipollo/release-action@release/1.8.3
+        uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
