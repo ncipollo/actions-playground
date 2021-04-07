@@ -21,7 +21,7 @@ jobs:
           artifacts: images/*.png,text/*.txt
           artifactContentType: "raw"
           bodyFile: "body.md"
-          discussionCategory: "Release"
+          discussionCategory: "Releasex"
           draft: false
           prerelease: false
           replacesArtifacts: true
