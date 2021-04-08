@@ -22,7 +22,7 @@ jobs:
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
-          draft: true
+          draft: false
           prerelease: false
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
