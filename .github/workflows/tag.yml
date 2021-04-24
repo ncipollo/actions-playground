@@ -13,12 +13,14 @@ jobs:
       - uses: actions/checkout@v1
       - name: Echo GITHUB_REF
         run: echo $GITHUB_REF
+      - name: Tar text folder
+        run: tar -czf text.tar.gz text
       - name: Publish release
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
-          artifacts: images/*.png,text/*.txt
+          artifacts: images/*.png,text/*.txt,text.tar.gz
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
