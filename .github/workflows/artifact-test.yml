@@ -16,7 +16,8 @@ jobs:
       - name: Print Environment Details
         run: ls /home/runner
       - name: Publish release
-        uses: ncipollo/release-action@v1
+        id: release
+        uses: ncipollo/release-action@release/1.8.5
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
@@ -26,3 +27,7 @@ jobs:
           replacesArtifacts: true
           tag: test-tag
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Dump Release Outputs
+        env:
+          RELEASE_OUTPUT: ${{ toJson(steps.release.outputs) }}
+        run: echo "$RELEASE_OUTPUT"
