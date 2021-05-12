@@ -16,6 +16,7 @@ jobs:
       - name: Tar text folder
         run: tar -czf text.tar.gz text
       - name: Publish release
+        id: release
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
@@ -28,3 +29,7 @@ jobs:
           prerelease: false
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Dump Release Outputs
+        env:
+          RELEASE_OUTPUT: ${{ toJson(steps.release.outputs) }}
+        run: echo "$RELEASE_OUTPUT"
