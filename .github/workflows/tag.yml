@@ -17,11 +17,11 @@ jobs:
         run: tar -czf text.tar.gz text
       - name: Publish release
         id: release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1.8.6
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
-          artifacts: images/*.png,text/*.txt,text.tar.gz
+          artifacts: images,images/*.png,text/*.txt,text.tar.gz
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
