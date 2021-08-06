@@ -28,7 +28,6 @@ jobs:
           draft: false
           prerelease: false
           replacesArtifacts: true
-          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Dump Release Outputs
         env:
           RELEASE_OUTPUT: ${{ toJson(steps.release.outputs) }}
