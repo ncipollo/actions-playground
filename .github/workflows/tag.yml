@@ -21,13 +21,12 @@ jobs:
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
-          artifacts: images,images/*.png,text/*.txt,text.tar.gz
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
           draft: false
           prerelease: false
-          replacesArtifacts: true
+          removeArtifacts: true
       - name: Dump Release Outputs
         env:
           RELEASE_OUTPUT: ${{ toJson(steps.release.outputs) }}
