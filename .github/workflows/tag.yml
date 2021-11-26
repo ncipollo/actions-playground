@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Echo GITHUB_REF
-        run: echo $GITHUB_REF
       - name: Tar text folder
         run: tar -czf text.tar.gz text
       - name: Publish release
