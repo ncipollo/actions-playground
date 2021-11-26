@@ -26,6 +26,7 @@ jobs:
           bodyFile: "body.md"
           discussionCategory: "Release"
           draft: false
+          generateReleaseNotes: true
           prerelease: false
           replacesArtifacts: true
       - name: Dump Release Outputs
