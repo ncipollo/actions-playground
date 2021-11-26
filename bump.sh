@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TAG=0.0.71
+TAG=0.0.73
 
 date >> text/text1.txt
 git add .
