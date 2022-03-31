@@ -29,6 +29,7 @@ jobs:
           generateReleaseNotes: true
           prerelease: false
           replacesArtifacts: true
+          omitDraftDuringUpdate: true
       - name: Dump Release Outputs
         env:
           RELEASE_OUTPUT: ${{ toJson(steps.release.outputs) }}
