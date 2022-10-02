@@ -26,7 +26,7 @@ jobs:
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
-          draft: true
+          draft: false
           generateReleaseNotes: true
           prerelease: false
           replacesArtifacts: true
