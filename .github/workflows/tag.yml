@@ -22,7 +22,11 @@ jobs:
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
-          artifacts: images,images/*.png,text/*.txt,text.tar.gz
+          artifacts: | 
+            images
+            images/*.png
+            text/*.txt
+            text.tar.gz
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
