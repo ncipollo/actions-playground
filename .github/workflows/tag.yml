@@ -31,10 +31,11 @@ jobs:
           discussionCategory: "Release"
           draft: true
           generateReleaseNotes: true
+          name: Bump Release
           prerelease: false
           replacesArtifacts: true
           omitDraftDuringUpdate: false
-          skipIfReleaseExists: false
+          skipIfReleaseExists: true
       - name: Dump Release Outputs
         env:
           RELEASE_OUTPUT: ${{ toJson(steps.release.outputs) }}
