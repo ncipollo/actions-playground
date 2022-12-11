@@ -18,7 +18,7 @@ jobs:
         run: tar -czf text.tar.gz text
       - name: Publish release
         id: release
-        uses: ncipollo/release-action@main
+        uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
@@ -31,7 +31,6 @@ jobs:
           discussionCategory: "Release"
           draft: false
           generateReleaseNotes: true
-          makeLatest: true
           name: Bump Release
           prerelease: false
           replacesArtifacts: true
