@@ -31,6 +31,7 @@ jobs:
           discussionCategory: "Release"
           draft: false
           generateReleaseNotes: true
+          makeLatest: true
           name: Bump Release
           prerelease: false
           replacesArtifacts: true
