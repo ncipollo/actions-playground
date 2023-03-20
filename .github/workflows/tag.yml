@@ -29,12 +29,12 @@ jobs:
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
-          draft: false
+          draft: true
           generateReleaseNotes: true
           name: Bump Release
           prerelease: false
           replacesArtifacts: true
-          omitDraftDuringUpdate: false
+          omitDraftDuringUpdate: true
           skipIfReleaseExists: false
       - name: Dump Release Outputs
         env:
