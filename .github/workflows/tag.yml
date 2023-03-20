@@ -34,7 +34,7 @@ jobs:
           name: Bump Release
           prerelease: false
           replacesArtifacts: true
-          omitDraftDuringUpdate: false
+          omitDraftDuringUpdate: true
           skipIfReleaseExists: false
       - name: Dump Release Outputs
         env:
