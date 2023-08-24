@@ -18,7 +18,7 @@ jobs:
         run: tar -czf text.tar.gz text
       - name: Publish release
         id: release
-        uses: ncipollo/release-action@ncipollo/357/try-file-streams
+        uses: ncipollo/release-action@v1.13.0
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
