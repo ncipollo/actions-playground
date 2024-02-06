@@ -49,6 +49,7 @@ jobs:
           replacesArtifacts: true
           omitDraftDuringUpdate: true
           skipIfReleaseExists: false
+          token: ${{ secrets.REPO_TOKEN }}
       - name: Dump Release Outputs
         env:
           RELEASE_OUTPUT: ${{ toJson(steps.release.outputs) }}
