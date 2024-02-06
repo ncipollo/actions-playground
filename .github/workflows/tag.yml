@@ -49,6 +49,8 @@ jobs:
           replacesArtifacts: true
           omitDraftDuringUpdate: true
           skipIfReleaseExists: false
+          tag: 0.0.1
+          repo: action-playground-other-repo
           token: ${{ secrets.REPO_TOKEN }}
       - name: Dump Release Outputs
         env:
