@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
@@ -29,7 +29,7 @@ jobs:
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
-          draft: true
+          draft: false
           generateReleaseNotes: true
           makeLatest: true
           name: Bump Release
