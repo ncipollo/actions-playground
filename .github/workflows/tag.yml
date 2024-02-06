@@ -27,14 +27,26 @@ jobs:
             ${{ github.workspace }}/text/*.txt
             text.tar.gz
           artifactContentType: "raw"
-          bodyFile: "body.md"
+#          bodyFile: "body.md"
+          body: |
+            # Release Notes (Beta)
+            This beta is provided as a OTA bridge to the new pre-releases
+            
+            ### Upgrade Instructions
+            You can update to this release using the `beta` channel on your device. This is the recommended way to use beta versions.
+            
+             **IMPORTANT NOTE**: There are **three different images** below, one for the **RG351P/M**, **RG351V** and **RG351MP**! 
+            **If you download the incorrect image for your device, it will not boot!**  If you are unsure, use the the following links:
+            **New Installations** (`.img.gz`):  **[RG351P/M](https://github.com/${{ github.event.repository.owner.login }}/AmberELEC-prerelease/releases/download/${{ steps.version.outputs.version }}/AmberELEC-RG351P.aarch64-${{ steps.version.outputs.version }}.img.gz)** |  **[RG351V](https://github.com/${{ github.event.repository.owner.login }}/AmberELEC-prerelease/releases/download/${{ steps.version.outputs.version }}/AmberELEC-RG351V.aarch64-${{ steps.version.outputs.version }}.img.gz)** |  **[RG351MP](https://github.com/${{ github.event.repository.owner.login }}/AmberELEC-prerelease/releases/download/${{ steps.version.outputs.version }}/AmberELEC-RG351MP.aarch64-${{ steps.version.outputs.version }}.img.gz)**
+            **Upgrades** (place in `/storage/roms/update`): **[RG351P/M](https://github.com/${{ github.event.repository.owner.login }}/AmberELEC-prerelease/releases/download/${{ steps.version.outputs.version }}/AmberELEC-RG351P.aarch64-${{ steps.version.outputs.version }}.tar)** |  **[RG351V](https://github.com/${{ github.event.repository.owner.login }}/AmberELEC-prerelease/releases/download/${{ steps.version.outputs.version }}/AmberELEC-RG351V.aarch64-${{ steps.version.outputs.version }}.tar)** |  **[RG351MP](https://github.com/${{ github.event.repository.owner.login }}/AmberELEC-prerelease/releases/download/${{ steps.version.outputs.version }}/AmberELEC-RG351MP.aarch64-${{ steps.version.outputs.version }}.tar)**
+
           discussionCategory: "Release"
           draft: true
           generateReleaseNotes: true
           makeLatest: true
           name: Bump Release
           prerelease: false
-          removeArtifacts: true
+          replacesArtifacts: true
           omitDraftDuringUpdate: true
           skipIfReleaseExists: false
       - name: Dump Release Outputs
