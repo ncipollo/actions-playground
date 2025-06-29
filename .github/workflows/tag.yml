@@ -18,7 +18,7 @@ jobs:
         run: tar -czf text.tar.gz text
       - name: Publish release
         id: release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@ncipollo/529/asset-download-urls
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
