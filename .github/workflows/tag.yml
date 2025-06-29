@@ -22,10 +22,6 @@ jobs:
         with:
           allowUpdates: true
           artifactErrorsFailBuild: false
-          artifacts: |
-            ${{ github.workspace }}/images/*.png
-            ${{ github.workspace }}/text/*.txt
-            text.tar.gz
           artifactContentType: "raw"
           bodyFile: "body.md"
           discussionCategory: "Release"
