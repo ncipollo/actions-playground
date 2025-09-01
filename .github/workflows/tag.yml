@@ -38,6 +38,8 @@ jobs:
           replacesArtifacts: true
           omitDraftDuringUpdate: true
           skipIfReleaseExists: false
+          commit: master
+          tag: 3.15.15
       - name: Dump Release Outputs
         env:
           RELEASE_OUTPUT: ${{ toJson(steps.release.outputs) }}
