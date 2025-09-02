@@ -31,6 +31,7 @@ jobs:
           discussionCategory: "Release"
           draft: false
           generateReleaseNotes: true
+          generateReleaseNotesPreviousTag: 0.0.70
           immutableCreate: true
           makeLatest: true
           name: Bump Release
