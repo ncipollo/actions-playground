@@ -27,7 +27,7 @@ jobs:
             ${{ github.workspace }}/text/*.txt
             text.tar.gz
           artifactContentType: "raw"
-          
+          bodyFile: "body.md"
           discussionCategory: "Release"
           draft: false
           generateReleaseNotes: true
