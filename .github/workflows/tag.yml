@@ -30,7 +30,7 @@ jobs:
           bodyFile: "body.md"
           discussionCategory: "Release"
           draft: false
-          generateReleaseNotes: true
+          generateReleaseNotes: false
           immutableCreate: true
           makeLatest: true
           name: Bump Release
