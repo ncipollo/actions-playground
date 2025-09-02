@@ -27,10 +27,10 @@ jobs:
             ${{ github.workspace }}/text/*.txt
             text.tar.gz
           artifactContentType: "raw"
-          bodyFile: "body.md"
+          
           discussionCategory: "Release"
           draft: false
-          generateReleaseNotes: false
+          generateReleaseNotes: true
           immutableCreate: true
           makeLatest: true
           name: Bump Release
